@@ -286,7 +286,7 @@ Visualization Manager:
   Global Options:
     Background Color: 255; 255; 255
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: /base_link
     Frame Rate: 30
   Name: root
   Tools:

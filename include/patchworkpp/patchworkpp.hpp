@@ -19,7 +19,7 @@
 #include <numeric>
 #include <queue>
 #include <mutex>
-
+#include <boost/filesystem.hpp>
 #include <patchworkpp/utils.hpp>
 
 #define MARKER_Z_VALUE -2.2
@@ -164,7 +164,7 @@ public:
                         2 * M_PI / num_sectors_each_zone_.at(2),
                         2 * M_PI / num_sectors_each_zone_.at(3)};
 
-        cout << "INITIALIZATION COMPLETE" << endl;
+        // cout << "INITIALIZATION COMPLETE" << endl;
 
         for (int i = 0; i < num_zones_; i++) {
             Zone z;
@@ -801,10 +801,10 @@ void PatchWorkpp<PointT>::temporal_ground_revert(pcl::PointCloud<PointT> &cloud_
         {
             if (revert)
             {
-                if (verbose_)
-                {
-                    cout << "\033[1;32m" << "REVERT TRUE" << "\033[0m" << endl;
-                }
+                // if (verbose_)
+                // {
+                //     cout << "\033[1;32m" << "REVERT TRUE" << "\033[0m" << endl;
+                // }
 
                 revert_pc_ += candidate.regionwise_ground;
                 cloud_ground += candidate.regionwise_ground;
